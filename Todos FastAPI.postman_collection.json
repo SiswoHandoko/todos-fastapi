@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "df0616ae-94bf-40cc-b8f4-28b28ad81d67",
+		"name": "Todos FastAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "290234"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-platform",
+						"value": "sanctuary",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "0pzeQert79*LHUqiBL$L!@X9TKCd$lr0yVrY#DCZv6pu8vkGuwvW!ijTB^WS!*0Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhbXBsZSIsImV4cCI6MTc1ODUzMzUzNH0.JCOCT6--WYFrIKW5y-FDBN5twofC6i6vJztyOyFbPX0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-platform",
+						"value": "sanctuary",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "0pzeQert79*LHUqiBL$L!@X9TKCd$lr0yVrY#DCZv6pu8vkGuwvW!ijTB^WS!*0Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhbXBsZSIsImV4cCI6MTc1ODUzMzUzNH0.JCOCT6--WYFrIKW5y-FDBN5twofC6i6vJztyOyFbPX0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-platform",
+						"value": "sanctuary",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "0pzeQert79*LHUqiBL$L!@X9TKCd$lr0yVrY#DCZv6pu8vkGuwvW!ijTB^WS!*0Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"admin1\",\r\n    \"description\": \"description1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/todos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"todos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhbXBsZSIsImV4cCI6MTc1ODUzMzUzNH0.JCOCT6--WYFrIKW5y-FDBN5twofC6i6vJztyOyFbPX0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-platform",
+						"value": "sanctuary",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "0pzeQert79*LHUqiBL$L!@X9TKCd$lr0yVrY#DCZv6pu8vkGuwvW!ijTB^WS!*0Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"admin\",\r\n    \"description\": \"description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNhbXBsZSIsImV4cCI6MTc1ODUzMzUzNH0.JCOCT6--WYFrIKW5y-FDBN5twofC6i6vJztyOyFbPX0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-platform",
+						"value": "sanctuary",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "0pzeQert79*LHUqiBL$L!@X9TKCd$lr0yVrY#DCZv6pu8vkGuwvW!ijTB^WS!*0Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/todos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"todos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
